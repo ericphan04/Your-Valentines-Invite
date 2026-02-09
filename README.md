@@ -22,6 +22,7 @@ A beautiful, interactive Valentine's Day website template with parallax scrollin
 - **Parallax Photo Timeline** with smooth scroll effects and milestone cards
 - **Interactive Tulip Catcher Game** - catch 10 tulips to unlock the invitation
 - **Beautiful Invitation Card** with calendar export and email response features
+- **Playful Escaping No Button** - the "No" button runs away from your cursor for extra fun!
 - **Fully Responsive** - works perfectly on mobile and desktop
 - **Lightweight & Fast** - optimized for excellent Lighthouse scores
 - **Easy Customization** - all settings in one config file
@@ -54,6 +55,9 @@ Once deployed, your website will feature:
   <tr>
     <td><img src="Screenshots/d5.png" alt="Game Victory" width="400"/><br/><b>Game Victory</b></td>
     <td><img src="Screenshots/d6.png" alt="Invitation Card" width="400"/><br/><b>Invitation Card</b></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="Screenshots/d7.png" alt="Escaping No Button" width="800"/><br/><b>Escaping No Button - Try to catch it!</b></td>
   </tr>
 </table>
 

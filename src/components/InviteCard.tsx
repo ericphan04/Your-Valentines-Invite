@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useRef } from 'react';
 import loveConfig from '@/config/loveConfig';
 import styles from './InviteCard.module.css';
 
@@ -8,9 +9,68 @@ interface InviteCardProps {
 }
 
 export default function InviteCard({ onPlayAgain }: InviteCardProps) {
+  const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
+  const [isNoButtonEscaping, setIsNoButtonEscaping] = useState(false);
+  const noButtonRef = useRef<HTMLButtonElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
   const handleYesClick = () => {
     // Show celebration modal or directly trigger actions
-    alert('🎉 Yay! I can\'t wait to celebrate with you! 💕');
+    alert('🎉 Yay! I knew you would say yes... I can\'t wait to celebrate with you!! 💕');
+  };
+
+  const handleNoClick = () => {
+    // Optional: Show a sad message or do nothing
+    console.log('Trying to click No... 😏');
+  };
+
+  const moveNoButton = (cursorX: number, cursorY: number) => {
+    if (!noButtonRef.current) return;
+
+    const buttonRect = noButtonRef.current.getBoundingClientRect();
+    const buttonCenterX = buttonRect.left + buttonRect.width / 2;
+    const buttonCenterY = buttonRect.top + buttonRect.height / 2;
+
+    // Calculate distance from cursor to button center
+    const distance = Math.sqrt(
+      Math.pow(cursorX - buttonCenterX, 2) + 
+      Math.pow(cursorY - buttonCenterY, 2)
+    );
+
+    // If cursor is within 150px, move the button away
+    if (distance < 150) {
+      if (!isNoButtonEscaping) {
+        setIsNoButtonEscaping(true);
+      }
+
+      // Calculate direction away from cursor
+      const angle = Math.atan2(buttonCenterY - cursorY, buttonCenterX - cursorX);
+      
+      // Move button 400px away in that direction (fast escape!)
+      const moveDistance = 400;
+      let newX = buttonRect.left + Math.cos(angle) * moveDistance;
+      let newY = buttonRect.top + Math.sin(angle) * moveDistance;
+
+      // Keep button within viewport bounds
+      const padding = 40;
+      const maxX = window.innerWidth - buttonRect.width - padding;
+      const maxY = window.innerHeight - buttonRect.height - padding;
+      
+      newX = Math.max(padding, Math.min(newX, maxX));
+      newY = Math.max(padding, Math.min(newY, maxY));
+
+      setNoButtonPosition({ x: newX, y: newY });
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    moveNoButton(e.clientX, e.clientY);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (e.touches.length > 0) {
+      moveNoButton(e.touches[0].clientX, e.touches[0].clientY);
+    }
   };
 
   const handleAddToCalendar = () => {
@@ -67,14 +127,13 @@ END:VCALENDAR`;
   };
 
   return (
-    <div className={styles.inviteContainer}>
+    <div 
+      className={styles.inviteContainer}
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onTouchMove={handleTouchMove}
+    >
       <div className={styles.inviteCard}>
-        <div className={styles.flowerDecoration}>
-          <span>🌷</span>
-          <span>💕</span>
-          <span>🌷</span>
-        </div>
-
         <h2 className={styles.inviteTitle}>{loveConfig.inviteTitle}</h2>
         
         <div className={styles.inviteDetails}>
@@ -113,6 +172,21 @@ END:VCALENDAR`;
             Yes! I'd Love To! 💕
           </button>
 
+          <button 
+            ref={noButtonRef}
+            className={`btn-secondary ${styles.noButton} ${isNoButtonEscaping ? styles.noButtonEscaping : ''}`}
+            style={{
+              position: isNoButtonEscaping ? 'fixed' : 'relative',
+              left: isNoButtonEscaping ? `${noButtonPosition.x}px` : 'auto',
+              top: isNoButtonEscaping ? `${noButtonPosition.y}px` : 'auto',
+              transition: isNoButtonEscaping ? 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)' : 'none',
+              zIndex: isNoButtonEscaping ? 1000 : 'auto',
+            }}
+            onClick={handleNoClick}
+          >
+            No 😢
+          </button>
+
           <div className={styles.secondaryActions}>
             <button 
               className="btn-secondary"
@@ -138,29 +212,6 @@ END:VCALENDAR`;
             🎮 Play Game Again
           </button>
         </div>
-
-        <div className={styles.heartBorder}>
-          {[...Array(8)].map((_, i) => (
-            <span key={i} className={styles.heartIcon}>❤️</span>
-          ))}
-        </div>
-      </div>
-
-      {/* Animated hearts background */}
-      <div className={styles.floatingHearts}>
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className={styles.floatingHeart}
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${8 + Math.random() * 4}s`,
-            }}
-          >
-            {['💕', '❤️', '💗', '💖'][Math.floor(Math.random() * 4)]}
-          </div>
-        ))}
       </div>
     </div>
   );
