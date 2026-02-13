@@ -1,0 +1,1334 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/Hero.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+.Hero_hero__T3Fr4 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FFF5F7 0%, #FFE8ED 50%, #FFD6E0 100%);
+  overflow: hidden;
+}
+
+/* Floating petals animation */
+.Hero_petals__55bB2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.Hero_petal__HA_mi {
+  position: absolute;
+  top: -50px;
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: Hero_fall__MRUWg linear infinite;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes Hero_fall__MRUWg {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Hero content */
+.Hero_content__9ypWn {
+  text-align: center;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 900px;
+  animation: Hero_fadeIn__oyFhM 1.5s ease-out;
+}
+
+@keyframes Hero_fadeIn__oyFhM {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Hero_tulipIcon__sFWtC {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: Hero_float__DekGx 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(230, 57, 70, 0.3));
+}
+
+@keyframes Hero_float__DekGx {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.Hero_headline__ejJDL {
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 20px rgba(230, 57, 70, 0.2);
+}
+
+.Hero_subtext__nG30R {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  line-height: 1.8;
+  color: var(--color-text-dark);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: pre-line;
+}
+
+.Hero_heartDivider__uy5MT {
+  margin: 2rem 0;
+  font-size: 2rem;
+  animation: Hero_pulse__2CMVt 2s ease-in-out infinite;
+}
+
+@keyframes Hero_pulse__2CMVt {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Scroll indicator */
+.Hero_scrollHint__v1GiD {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.Hero_scrollHint__v1GiD:hover {
+  transform: translateX(-50%) translateY(-5px);
+  color: var(--color-secondary);
+}
+
+.Hero_chevron__0lIdV {
+  animation: Hero_bounce__dsoL7 2s ease-in-out infinite;
+}
+
+@keyframes Hero_bounce__dsoL7 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .Hero_content__9ypWn {
+    padding: 1.5rem;
+  }
+
+  .Hero_tulipIcon__sFWtC {
+    font-size: 3rem;
+  }
+
+  .Hero_petal__HA_mi {
+    font-size: 1.5rem;
+  }
+
+  .Hero_scrollHint__v1GiD {
+    bottom: 2rem;
+  }
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/ParallaxTimeline.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+.ParallaxTimeline_timeline__7SidV {
+  position: relative;
+  background: linear-gradient(180deg, var(--color-cream) 0%, var(--color-warm-cream) 100%);
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.ParallaxTimeline_background__4BvWW {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ParallaxTimeline_gradientOrb1__MjF_U,
+.ParallaxTimeline_gradientOrb2__nUGYz {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+}
+
+.ParallaxTimeline_gradientOrb1__MjF_U {
+  background: var(--gradient-romantic);
+  top: 10%;
+  right: -10%;
+  animation: ParallaxTimeline_float__kLvDC 20s ease-in-out infinite;
+}
+
+.ParallaxTimeline_gradientOrb2__nUGYz {
+  background: var(--gradient-soft);
+  bottom: 20%;
+  left: -10%;
+  animation: ParallaxTimeline_float__kLvDC 25s ease-in-out infinite reverse;
+}
+
+.ParallaxTimeline_container__9z31a {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ParallaxTimeline_header__MCBWf {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.ParallaxTimeline_header__MCBWf h2 {
+  margin-bottom: 1rem;
+}
+
+.ParallaxTimeline_header__MCBWf p {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+}
+
+/* Timeline track */
+.ParallaxTimeline_timelineTrack__FLBtj {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Center line */
+.ParallaxTimeline_timelineTrack__FLBtj::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    var(--color-secondary) 10%, 
+    var(--color-secondary) 90%, 
+    transparent 100%
+  );
+  transform: translateX(-50%);
+}
+
+/* Timeline items */
+.ParallaxTimeline_timelineItem__7jj8l {
+  position: relative;
+  margin-bottom: 6rem;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.ParallaxTimeline_timelineItem__7jj8l.ParallaxTimeline_visible__UGQyQ {
+  opacity: 1;
+}
+
+.ParallaxTimeline_timelineItem__7jj8l.ParallaxTimeline_left__enL9V {
+  transform: translateX(-50px);
+}
+
+.ParallaxTimeline_timelineItem__7jj8l.ParallaxTimeline_left__enL9V.ParallaxTimeline_visible__UGQyQ {
+  transform: translateX(0);
+}
+
+.ParallaxTimeline_timelineItem__7jj8l.ParallaxTimeline_right__4f_oM {
+  transform: translateX(50px);
+}
+
+.ParallaxTimeline_timelineItem__7jj8l.ParallaxTimeline_right__4f_oM.ParallaxTimeline_visible__UGQyQ {
+  transform: translateX(0);
+}
+
+/* Item content */
+.ParallaxTimeline_itemContent__mBJar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+  gap: 4rem;
+  align-items: center;
+}
+
+.ParallaxTimeline_timelineItem__7jj8l.ParallaxTimeline_left__enL9V .ParallaxTimeline_itemContent__mBJar {
+  grid-template-areas: "photo milestone";
+}
+
+.ParallaxTimeline_timelineItem__7jj8l.ParallaxTimeline_right__4f_oM .ParallaxTimeline_itemContent__mBJar {
+  grid-template-areas: "milestone photo";
+}
+
+.ParallaxTimeline_photoWrapper__bwfY6 {
+  grid-area: photo;
+  position: relative;
+}
+
+.ParallaxTimeline_milestoneCard__txoap {
+  grid-area: milestone;
+}
+
+/* Photo styling */
+.ParallaxTimeline_photoFrame__KDbaC {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: white;
+  padding: 12px;
+}
+
+.ParallaxTimeline_photoFrame__KDbaC:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.ParallaxTimeline_photo__V8Whv {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.ParallaxTimeline_photoOverlay__t3_UQ {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 100%);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.ParallaxTimeline_heartFloat__md9Qs {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 3rem;
+  animation: ParallaxTimeline_float__kLvDC 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(230, 57, 70, 0.4));
+}
+
+/* Milestone card */
+.ParallaxTimeline_milestoneCard__txoap {
+  background: white;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.ParallaxTimeline_milestoneCard__txoap:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+.ParallaxTimeline_dateTag__nNvfk {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gradient-soft);
+  color: var(--color-primary);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.ParallaxTimeline_calendarIcon__Kac_1 {
+  font-size: 1rem;
+}
+
+.ParallaxTimeline_milestoneTitle__MHXAB {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.ParallaxTimeline_milestoneDescription__FJO0b {
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+/* Timeline connector */
+.ParallaxTimeline_connector__qfJum {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.ParallaxTimeline_dot__mL3Th {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border: 4px solid var(--color-secondary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(255, 107, 157, 0.2);
+  transition: all 0.3s ease;
+}
+
+.ParallaxTimeline_timelineItem__7jj8l.ParallaxTimeline_visible__UGQyQ .ParallaxTimeline_dot__mL3Th {
+  animation: ParallaxTimeline_pulse__lEO8_ 2s ease-in-out infinite;
+}
+
+@keyframes ParallaxTimeline_pulse__lEO8_ {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(255, 107, 157, 0.2);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 12px rgba(255, 107, 157, 0.3);
+  }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .ParallaxTimeline_timelineTrack__FLBtj::before {
+    left: 2rem;
+  }
+
+  .ParallaxTimeline_itemContent__mBJar {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-left: 5rem;
+  }
+
+  .ParallaxTimeline_timelineItem__7jj8l.ParallaxTimeline_left__enL9V .ParallaxTimeline_itemContent__mBJar,
+  .ParallaxTimeline_timelineItem__7jj8l.ParallaxTimeline_right__4f_oM .ParallaxTimeline_itemContent__mBJar {
+    grid-template-areas: 
+      "photo"
+      "milestone";
+  }
+
+  .ParallaxTimeline_connector__qfJum {
+    left: 2rem;
+    top: 3rem;
+  }
+
+  .ParallaxTimeline_timelineItem__7jj8l {
+    margin-bottom: 4rem;
+  }
+
+  .ParallaxTimeline_photo__V8Whv {
+    height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ParallaxTimeline_timeline__7SidV {
+    padding: 4rem 0;
+  }
+
+  .ParallaxTimeline_header__MCBWf {
+    margin-bottom: 3rem;
+  }
+
+  .ParallaxTimeline_itemContent__mBJar {
+    padding-left: 3rem;
+  }
+
+  .ParallaxTimeline_timelineTrack__FLBtj::before {
+    left: 1rem;
+  }
+
+  .ParallaxTimeline_connector__qfJum {
+    left: 1rem;
+  }
+
+  .ParallaxTimeline_dot__mL3Th {
+    width: 18px;
+    height: 18px;
+    border-width: 3px;
+  }
+
+  .ParallaxTimeline_photo__V8Whv {
+    height: 250px;
+  }
+
+  .ParallaxTimeline_milestoneCard__txoap {
+    padding: 1.5rem;
+  }
+
+  .ParallaxTimeline_heartFloat__md9Qs {
+    font-size: 2rem;
+    top: -15px;
+    right: -15px;
+  }
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/TimeCounter.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.TimeCounter_counterSection__cTO1b {
+  background: linear-gradient(135deg, #FFE8ED 0%, #FFF5F7 100%);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.TimeCounter_counterSection__cTO1b::before {
+  content: '💕';
+  position: absolute;
+  font-size: 15rem;
+  opacity: 0.05;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.TimeCounter_container__rLMS3 {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.TimeCounter_content__N_NhD {
+  text-align: center;
+}
+
+.TimeCounter_icon__e95b2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  animation: TimeCounter_swing__WEjnC 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes TimeCounter_swing__WEjnC {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.TimeCounter_title__OYggt {
+  margin-bottom: 0.5rem;
+}
+
+.TimeCounter_subtitle__LYJ_5 {
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+  margin-bottom: 3rem;
+}
+
+/* Counter grid */
+.TimeCounter_counterGrid__Oi_QG {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 2rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.TimeCounter_timeBox__d_p09 {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.TimeCounter_timeBox__d_p09::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-romantic);
+}
+
+.TimeCounter_timeBox__d_p09:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 50px rgba(230, 57, 70, 0.15);
+}
+
+.TimeCounter_timeValue__X9dkF {
+  font-size: 3rem;
+  font-weight: 700;
+  background: var(--gradient-romantic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  animation: TimeCounter_countPulse__NWdMk 2s ease-in-out infinite;
+}
+
+@keyframes TimeCounter_countPulse__NWdMk {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+.TimeCounter_timeLabel__6Ij7i {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.TimeCounter_timeIcon__sw8Mj {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+.TimeCounter_message__G_fxH {
+  font-size: 1.25rem;
+  color: var(--color-text-dark);
+  font-weight: 500;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .TimeCounter_counterSection__cTO1b {
+    padding: 4rem 0;
+  }
+
+  .TimeCounter_counterGrid__Oi_QG {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .TimeCounter_timeBox__d_p09 {
+    padding: 1.5rem 1rem;
+  }
+
+  .TimeCounter_timeValue__X9dkF {
+    font-size: 2.5rem;
+  }
+
+  .TimeCounter_icon__e95b2 {
+    font-size: 2.5rem;
+  }
+
+  .TimeCounter_message__G_fxH {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .TimeCounter_counterGrid__Oi_QG {
+    gap: 1rem;
+  }
+
+  .TimeCounter_timeBox__d_p09 {
+    padding: 1.25rem 0.875rem;
+  }
+
+  .TimeCounter_timeValue__X9dkF {
+    font-size: 2rem;
+  }
+
+  .TimeCounter_timeLabel__6Ij7i {
+    font-size: 0.75rem;
+  }
+
+  .TimeCounter_timeIcon__sw8Mj {
+    font-size: 1.25rem;
+  }
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/InviteCard.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.InviteCard_inviteContainer__6P8aL {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #FFE8ED 0%, #FFF5F7 100%);
+}
+
+.InviteCard_inviteCard__HjWYa {
+  position: relative;
+  background: white;
+  border-radius: 32px;
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 30px 80px rgba(230, 57, 70, 0.2);
+  animation: InviteCard_slideUp__aOYpF 0.8s ease-out;
+  z-index: 2;
+}
+
+@keyframes InviteCard_slideUp__aOYpF {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.InviteCard_flowerDecoration__svN_Q {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  animation: InviteCard_bounceIn___5m1a 1s ease-out;
+}
+
+@keyframes InviteCard_bounceIn___5m1a {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.InviteCard_flowerDecoration__svN_Q span {
+  animation: InviteCard_float__BOR98 3s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.2s);
+}
+
+.InviteCard_flowerDecoration__svN_Q span:nth-child(1) {
+  --i: 0;
+}
+
+.InviteCard_flowerDecoration__svN_Q span:nth-child(2) {
+  --i: 1;
+}
+
+.InviteCard_flowerDecoration__svN_Q span:nth-child(3) {
+  --i: 2;
+}
+
+@keyframes InviteCard_float__BOR98 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.InviteCard_inviteTitle__Gwtt1 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 2rem;
+  background: var(--gradient-romantic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Cat with rose decoration */
+.InviteCard_catRoseContainer__FXshK {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: InviteCard_bounceIn___5m1a 1.2s ease-out;
+}
+
+.InviteCard_catRoseGif__5KsuS {
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.InviteCard_catRoseGif__5KsuS:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Invite details */
+.InviteCard_inviteDetails__11QyT {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  background: var(--color-warm-cream);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.InviteCard_detailItem__UFVz9 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.InviteCard_detailIcon__SeBU0 {
+  font-size: 2rem;
+  min-width: 50px;
+  text-align: center;
+}
+
+.InviteCard_detailLabel__2dmPA {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.InviteCard_detailValue__ULAIY {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+.InviteCard_inviteMessage__tBA4j {
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+/* Action buttons */
+.InviteCard_actionButtons__JjX7i {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.InviteCard_yesButton__IpUHX {
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 1.25rem 2rem;
+  animation: InviteCard_pulse__QmrMT 2s ease-in-out infinite;
+}
+
+@keyframes InviteCard_pulse__QmrMT {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.InviteCard_yesButton__IpUHX:hover {
+  animation: none;
+}
+
+.InviteCard_secondaryActions__FqXrA {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.InviteCard_secondaryActions__FqXrA button {
+  font-size: 0.9rem;
+  padding: 0.875rem 1rem;
+}
+
+/* Play again section */
+.InviteCard_playAgainSection__Wlcal {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px dashed var(--color-accent);
+  text-align: center;
+}
+
+.InviteCard_playAgainButton___ZPb9 {
+  background: transparent;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--color-accent);
+  transition: all 0.3s ease;
+}
+
+.InviteCard_playAgainButton___ZPb9:hover {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+/* Heart border decoration */
+.InviteCard_heartBorder__DY_TN {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+}
+
+.InviteCard_heartIcon__TpeQE {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 2px 8px rgba(230, 57, 70, 0.3));
+  animation: InviteCard_bounce__Etzw9 2s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.1s);
+}
+
+.InviteCard_heartBorder__DY_TN span:nth-child(1) { --i: 0; }
+.InviteCard_heartBorder__DY_TN span:nth-child(2) { --i: 1; }
+.InviteCard_heartBorder__DY_TN span:nth-child(3) { --i: 2; }
+.InviteCard_heartBorder__DY_TN span:nth-child(4) { --i: 3; }
+.InviteCard_heartBorder__DY_TN span:nth-child(5) { --i: 4; }
+.InviteCard_heartBorder__DY_TN span:nth-child(6) { --i: 5; }
+.InviteCard_heartBorder__DY_TN span:nth-child(7) { --i: 6; }
+.InviteCard_heartBorder__DY_TN span:nth-child(8) { --i: 7; }
+
+@keyframes InviteCard_bounce__Etzw9 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Floating hearts background */
+.InviteCard_floatingHearts__BHz1K {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.InviteCard_floatingHeart__3dZ0W {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: InviteCard_floatUp__kwvrb linear infinite;
+}
+
+@keyframes InviteCard_floatUp__kwvrb {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .InviteCard_inviteCard__HjWYa {
+    padding: 2rem 1.5rem;
+  }
+
+  .InviteCard_flowerDecoration__svN_Q {
+    font-size: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .InviteCard_inviteDetails__11QyT {
+    padding: 1.5rem;
+  }
+
+  .InviteCard_detailIcon__SeBU0 {
+    font-size: 1.5rem;
+    min-width: 40px;
+  }
+
+  .InviteCard_detailValue__ULAIY {
+    font-size: 1rem;
+  }
+
+  .InviteCard_secondaryActions__FqXrA {
+    grid-template-columns: 1fr;
+  }
+
+  .InviteCard_yesButton__IpUHX {
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .InviteCard_heartBorder__DY_TN {
+    top: -15px;
+  }
+
+  .InviteCard_heartIcon__TpeQE {
+    font-size: 1.25rem;
+  }
+
+  .InviteCard_floatingHeart__3dZ0W {
+    font-size: 1.5rem;
+  }
+}
+
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/components/TulipCatcher.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+.TulipCatcher_gameSection__NRXRw {
+  background: linear-gradient(180deg, var(--color-warm-cream) 0%, var(--color-cream) 100%);
+  padding: 6rem 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+.TulipCatcher_container___zCqW {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.TulipCatcher_gameHeader__sm5Nw {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.TulipCatcher_gameHeader__sm5Nw h2 {
+  margin-bottom: 1rem;
+}
+
+.TulipCatcher_gameHeader__sm5Nw p {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+}
+
+/* Start screen */
+.TulipCatcher_startScreen__HCOt_ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.TulipCatcher_startCard__z82Gx {
+  background: white;
+  border-radius: 32px;
+  padding: 3rem;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.TulipCatcher_gameIcon__TbDWx {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: TulipCatcher_bounce__l97XU 2s ease-in-out infinite;
+}
+
+@keyframes TulipCatcher_bounce__l97XU {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.TulipCatcher_startCard__z82Gx h3 {
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.TulipCatcher_instructions__0Q64v {
+  text-align: left;
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.TulipCatcher_instructions__0Q64v li {
+  padding: 0.75rem 0;
+  font-size: 1.125rem;
+  color: var(--color-text-dark);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.TulipCatcher_instructions__0Q64v li:last-child {
+  border-bottom: none;
+}
+
+/* Score board */
+.TulipCatcher_scoreBoard__A7la1 {
+  margin-bottom: 2rem;
+}
+
+.TulipCatcher_scoreBadge__WRv40 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.TulipCatcher_scoreLabel__6dKwj {
+  font-weight: 600;
+  color: var(--color-text-light);
+  font-size: 1.125rem;
+}
+
+.TulipCatcher_scoreValue___fL7S {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gradient-romantic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.TulipCatcher_progressBar__JmRmm {
+  width: 100%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.TulipCatcher_progressFill__awm6P {
+  height: 100%;
+  background: var(--gradient-romantic);
+  border-radius: 50px;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
+}
+
+/* Game area */
+.TulipCatcher_gameArea__juvFH {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(180deg, 
+    rgba(255, 235, 240, 0.3) 0%, 
+    rgba(255, 245, 247, 0.6) 100%
+  );
+  border-radius: 24px;
+  border: 3px dashed var(--color-accent);
+  overflow: hidden;
+  box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.TulipCatcher_tulip__sWa28 {
+  position: absolute;
+  font-size: 4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  animation: TulipCatcher_wiggle__kFmi4 2s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+  padding: 1rem;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.TulipCatcher_tulip__sWa28:hover {
+  transform: scale(1.3);
+}
+
+.TulipCatcher_tulip__sWa28:active {
+  transform: scale(0.8);
+  filter: drop-shadow(0 2px 4px rgba(230, 57, 70, 0.6));
+}
+
+@keyframes TulipCatcher_wiggle__kFmi4 {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.TulipCatcher_waitingMessage__766hf {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+  text-align: center;
+  animation: TulipCatcher_fadeInOut__Xz2Kf 2s ease-in-out infinite;
+}
+
+@keyframes TulipCatcher_fadeInOut__Xz2Kf {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Victory confetti */
+.TulipCatcher_confettiContainer__UynyX {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.TulipCatcher_confetti__oPvmK {
+  position: absolute;
+  font-size: 2rem;
+  animation: TulipCatcher_confettiFall__097Fw 3s ease-out infinite;
+}
+
+@keyframes TulipCatcher_confettiFall__097Fw {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .TulipCatcher_gameSection__NRXRw {
+    padding: 4rem 0;
+  }
+
+  .TulipCatcher_startCard__z82Gx {
+    padding: 2rem;
+  }
+
+  .TulipCatcher_gameArea__juvFH {
+    height: 450px;
+  }
+
+  .TulipCatcher_tulip__sWa28 {
+    font-size: 2.5rem;
+  }
+
+  .TulipCatcher_instructions__0Q64v li {
+    font-size: 1rem;
+  }
+
+  .TulipCatcher_gameIcon__TbDWx {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .TulipCatcher_gameArea__juvFH {
+    height: 400px;
+  }
+
+  .TulipCatcher_tulip__sWa28 {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+
+  .TulipCatcher_scoreBadge__WRv40 {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .TulipCatcher_scoreValue___fL7S {
+    font-size: 1.25rem;
+  }
+
+  .TulipCatcher_startCard__z82Gx {
+    padding: 1.5rem;
+  }
+
+  .TulipCatcher_confetti__oPvmK {
+    font-size: 1.5rem;
+  }
+}
+
