@@ -15,8 +15,11 @@ export default function ParallaxTimeline() {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Generate photo items by pairing photos with milestones
-  const photoItems: PhotoItem[] = Array.from({ length: loveConfig.photoCount }, (_, i) => ({
-    src: `/photos/photo_${i + 1}.jpg`,
+  // Use explicit photos array if available, otherwise fall back to legacy photoCount
+  const photos = loveConfig.photos || Array.from({ length: loveConfig.photoCount }, (_, i) => `photo_${i + 1}.jpg`);
+
+  const photoItems: PhotoItem[] = photos.map((src, i) => ({
+    src: `/photos/${src}`,
     milestone: loveConfig.milestones[i] || {
       title: 'Kỷ Niệm Đẹp',
       date: 'Hành Trình Của Chúng Ta',

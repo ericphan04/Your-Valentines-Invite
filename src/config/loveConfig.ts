@@ -38,8 +38,19 @@ export const loveConfig = {
     heroSubtext: "Một hành trình của chúng ta qua những khoảnh khắc bên nhau, trân trọng từng nụ cười, từng chuyến đi và từng nhịp đập con tim mà anh và em đã chia sẻ.",
 
     // === PHOTO GALLERY ===
-    // How many photos are in /public/photos/ ?
-    // Photos should be named: photo_1.jpg, photo_2.jpg, photo_3.jpg, etc.
+    // List all your photos here with their exact filenames (including extension)
+    // Photos must be in /public/photos/ folder
+    photos: [
+        "photo_1.jpg",
+        "photo_2.jpg",
+        "photo_3.jpg",
+        "photo_4.jpg",
+        "photo_5.JPG",
+        "photo_6.JPG",
+        "photo_7.JPG",
+        "photo_8.JPG"
+    ],
+    // Legacy support (optional, can be removed if code is updated)
     photoCount: 8,
 
     // === TIMELINE MILESTONES ===
