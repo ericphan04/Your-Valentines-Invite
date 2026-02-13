@@ -9,7 +9,7 @@ A beautiful, interactive Valentine's Day website template with parallax scrollin
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
 
 ## 📚 Documentation
-
+dđ
 - **[Setup Guide](SETUP.md)** - Complete step-by-step setup instructions
 - **[Quick Start](QUICKSTART.md)** - Get running in 5 minutes
 - **[Deployment Guide](DEPLOYMENT.md)** - Deploy to Vercel
