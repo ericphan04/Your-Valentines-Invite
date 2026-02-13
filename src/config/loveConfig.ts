@@ -19,7 +19,27 @@ export interface Milestone {
     description: string;
 }
 
-export const loveConfig = {
+export interface LoveConfig {
+    yourName: string;
+    partnerName: string;
+    relationshipStart: string;
+    valentineDate: string;
+    heroHeadline: string;
+    heroSubtext: string;
+    photos?: string[];  // Optional for backward compatibility
+    photoCount: number;
+    milestones: Milestone[];
+    yourEmail: string;
+    emailSubject: string;
+    emailBody: string;
+    inviteTitle: string;
+    inviteMessage: string;
+    inviteDate: string;
+    inviteTime: string;
+    inviteLocation: string;
+}
+
+export const loveConfig: LoveConfig = {
     // === PERSONAL DETAILS ===
     // Replace with your actual names
     yourName: "Trung Hiếu",
@@ -41,14 +61,14 @@ export const loveConfig = {
     // List all your photos here with their exact filenames (including extension)
     // Photos must be in /public/photos/ folder
     photos: [
-        "photo_1.jpg",
-        "photo_2.jpg",
-        "photo_3.jpg",
-        "photo_4.jpg",
-        "photo_5.JPG",
-        "photo_6.JPG",
-        "photo_7.JPG",
-        "photo_8.JPG"
+        "photo_1.png",
+        "photo_2.png",
+        "photo_3.png",
+        "photo_4.png",
+        "photo_5.png",
+        "photo_6.png",
+        "photo_7.png",
+        "photo_8.png"
     ],
     // Legacy support (optional, can be removed if code is updated)
     photoCount: 8,
